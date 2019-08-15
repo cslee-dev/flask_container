@@ -52,3 +52,8 @@ else:
     print('데이터베이스 연결 실패')
 
 
+def migrate():
+    from api_v1.account import models
+    print('migrate')
+    Base.metadata.create_all(engine)
+
