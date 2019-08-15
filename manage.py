@@ -17,6 +17,7 @@ for res, url in urls.urlpatterns:
         url = urls.prefix_url + url
     api.add_resource(res, url)
 
+
 def run():
     if __name__ == "__main__":
         app.run('localhost', 1472)
@@ -24,7 +25,7 @@ def run():
 
 command_task = {
     'migrate': database.migrate,
-    'run' : run
+    'run': run
 }
 
 for command in sys.argv[1:]:
